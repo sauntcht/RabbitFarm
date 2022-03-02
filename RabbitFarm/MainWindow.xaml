@@ -1,0 +1,41 @@
+﻿<Window x:Class="RabbitFarm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RabbitFarm"
+        mc:Ignorable="d"
+        
+        Title="Rabbit Farmer" Height="450" Width="320">
+
+    
+    
+    
+    <StackPanel RenderTransformOrigin="0.506,0.516">
+        <StackPanel.Background>
+            <LinearGradientBrush EndPoint="0.5,3" StartPoint="4,3">
+                <GradientStop Color="#FFABAA94"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </StackPanel.Background>
+
+        <Label Content="Rabbit Farmer" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FF4B4B4B" FontFamily="Gill Sans MT" FontWeight="Bold" FontSize="16" ></Label>
+        <Button Name ="addRabbitButton" Margin="60,10,60,10" Content="Click to add rabbit" FontWeight ="Light" Click="addRabbitButton_Click"  ></Button>
+
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Content="Rabbit Population" HorizontalAlignment="Center"></Label>
+            <TextBox x:Name ="rabbitPopulationBox" x:FieldModifier="public" Text="0" Grid.Column="1" Margin="30,0,30,10"></TextBox>
+            
+        </Grid>
+    </StackPanel>
+</Window>
